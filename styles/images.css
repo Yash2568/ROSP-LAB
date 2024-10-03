@@ -1,0 +1,28 @@
+.imgContainer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+.imgContainer > img {
+  height: 200px;
+  object-fit: cover;
+  padding: 4px;
+  max-width: 100%;
+}
+
+.team-member-card > img {
+  -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.75);
+  height: 200px;
+  object-fit: cover;
+  padding: 4px;
+  max-width: 100%;
+}
+
+.upi-image {
+  max-width: 100%;
+  max-height: 40em;
+}

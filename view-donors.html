@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Donors - First Human Rights Foundation</title>
+
+    <!-- CSS: Bootstrap for styling -->
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Custom CSS -->
+    <style>
+      body {
+        background-color: #f4f4f9;
+        font-family: 'Open Sans', sans-serif;
+      }
+      .donors-container {
+        max-width: 800px;
+        margin: 50px auto;
+        padding: 30px;
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+      h2 {
+        text-align: center;
+        color: #007bff;
+        margin-bottom: 30px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      th, td {
+        padding: 15px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+      }
+      th {
+        background-color: #007bff;
+        color: white;
+      }
+      .back-btn {
+        display: block;
+        margin-top: 30px;
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container donors-container">
+      <h2>Donors List</h2>
+
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Donor Name</th>
+            <th>Email</th>
+            <th>Amount (INR)</th>
+            <th>Payment Method</th>
+          </tr>
+        </thead>
+        <tbody id="donorsList">
+          <!-- Donors will be dynamically added here -->
+        </tbody>
+      </table>
+
+      <a href="index.html" class="btn btn-secondary back-btn">Back to Donation Page</a>
+    </div>
+
+    <!-- JS to fetch and display donor data -->
+    <script>
+      // Fetch donors from localStorage
+      const donors = JSON.parse(localStorage.getItem('donors')) || [];
+
+      // Get the table body element
+      const donorsList = document.getElementById('donorsList');
+
+      // Loop through donors and create rows for each
+      donors.forEach(function (donor) {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+          <td>${donor.name}</td>
+          <td>${donor.email}</td>
+          <td>${donor.amount}</td>
+          <td>${donor.paymentMethod}</td>
+        `;
+        donorsList.appendChild(row);
+      });
+    </script>
+  </body>
+</html>

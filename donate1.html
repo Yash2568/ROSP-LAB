@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>How to Donate</title>
+
+    <!-- Bootstrap CSS for grid layout -->
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Custom CSS -->
+    <style>
+      body {
+        background-color: #f4f4f9;
+        font-family: 'Open Sans', sans-serif;
+      }
+
+      .content {
+        font-size: 16px;
+        line-height: 1.6;
+      }
+
+      .font-heading {
+        font-size: 24px;
+        color: #007bff;
+        animation: fadeIn 1.5s ease-in-out;
+      }
+
+      .bank-details dt {
+        font-weight: bold;
+        color: #333;
+      }
+
+      .bank-details dd {
+        margin-left: 0;
+        color: #555;
+      }
+
+      .bank-details dl {
+        margin-bottom: 20px;
+      }
+
+      /* Button styling */
+      .btn-primary {
+        background-color: #007bff;
+        border-color: #007bff;
+        padding: 10px 20px;
+        font-size: 18px;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+      }
+
+      /* Button hover effect */
+      .btn-primary:hover {
+        background-color: #0056b3;
+        transform: translateY(-5px);
+      }
+
+      .btn-primary:active {
+        transform: translateY(0);
+      }
+
+      /* Button animation */
+      .btn-lg {
+        animation: bounceIn 2s ease-in-out;
+      }
+
+      /* Animations */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes bounceIn {
+        0%,
+        20%,
+        40%,
+        60%,
+        80%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-15px);
+        }
+      }
+
+      /* Styling for the section container */
+      .col-12 {
+        padding: 30px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        animation: fadeIn 1.5s ease-in-out;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-12 col-md-6 mx-auto">
+          <p class="content font-weight-bold font-heading">How to donate?</p>
+
+          <p class="content font-content">
+            You can donate to FHRF via UPI, NEFT, RTGS, Cheque, or DD to the following account:
+          </p>
+
+          <dl class="row font-content bank-details">
+            <dt class="col-4">UPI</dt>
+            <dd class="col-8">firsthumanri020@maharashtra</dd>
+
+            <dt class="col-4">Bank</dt>
+            <dd class="col-8">Bank of Maharashtra</dd>
+
+            <dt class="col-4">Account Name</dt>
+            <dd class="col-8">First Human Rights Foundation</dd>
+
+            <dt class="col-4">Account No</dt>
+            <dd class="col-8">04580200001183</dd>
+
+            <dt class="col-4">IFSC Code</dt>
+            <dd class="col-8">MAHA0SHRIRA</dd>
+
+            <dt class="col-4">Branch</dt>
+            <dd class="col-8">Thane</dd>
+          </dl>
+
+          <!-- Donate Now button with animation -->
+          <div class="text-center mt-4">
+            <a
+              href="donationform.html"
+              class="btn btn-primary btn-lg"
+            >
+              Donate Now
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS (optional, for form functionality) -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  </body>
+</html>
